@@ -65,11 +65,20 @@ public:
 
 int main() {
 
+ HashTable test;
 
+    string str, allText = " ";
 
-    ifstream fin("FourLetterWords.txt"); //infile
+    ifstream inputFile("FourLetterWords.txt"); //infile
 
-    if (fin) {
+    
+    while(inputFile >> str)
+    {
+       allText += str;
+        //cout << str << endl;
+    }
+    
+    if (inputFile) {
         cout << "The file was found." << endl;
     }
     else
@@ -77,11 +86,9 @@ int main() {
         cout << "The file was not found." << endl;
     }
 
-    HashTable test;
-
-    string str;
-    while (fin >> str) {
-       // test.insert(str);
+   
+    while (inputFile >> str) {
+       test.insert(str);
     }
 
    
