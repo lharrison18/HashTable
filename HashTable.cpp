@@ -11,6 +11,12 @@ private:
     const static int CAP = 33;
     list<string> myTable[CAP];
 
+     HashTable(int size) {
+
+        this->CAP = CAP;
+        myTable = new list<string>[CAP];
+
+  }
     int hashFunc(string str) {
         int sum = 0;
         for (int i = 0; i < str.size(); i++)
